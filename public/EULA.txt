@@ -1,0 +1,42 @@
+Chordalift – End User License Agreement (EULA)
+Version: v0.1.0   Date: 2025-08-17
+Contact: hedro5493@gmail.com
+
+1) License Grant
+You are granted a personal, non-exclusive, non-transferable license to install and use the Software on Windows 10/11 (x64). You may make a reasonable number of backups for personal use.
+
+2) No Affiliation
+Chordalift is a community project and is not affiliated with, endorsed by, or sponsored by Artiphon, Inc. or the Chorda product.
+
+3) Free of Charge & No Telemetry
+The Software is provided free of charge. It does not intentionally collect, transmit, or store personal data or telemetry.
+
+4) Third-Party Components
+The Software may include open-source or third-party components which remain under their respective licenses. You must comply with such licenses.
+
+5) User Responsibilities
+You are responsible for your use of the Software, including compliance with local laws, making backups, and protecting your system and data.
+
+6) No Warranty
+THE SOFTWARE IS PROVIDED “AS IS” WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+
+7) Limitation of Liability
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL THE AUTHORS OR CONTRIBUTORS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES, OR ANY LOSS OF DATA OR PROFITS, ARISING OUT OF THE USE OF THE SOFTWARE.
+
+8) Updates & Changes
+The Software may be updated from time to time. There is no obligation to provide maintenance, support, or updates. This EULA may be updated by publishing a new version together with the Software.
+
+9) Termination
+This EULA terminates automatically if you fail to comply with its terms. Upon termination, you must cease use and destroy copies of the Software.
+
+10) Governing Law
+This EULA will apply to the extent permitted by the laws of your jurisdiction, without regard to conflict-of-law rules.
+
+— — — — — 中文摘要（非正式翻譯）— — — — —
+• 授權：僅供個人、不可轉讓之使用授權。 
+• 非官方：本專案與 Artiphon/Chorda 無關。 
+• 免費且不蒐集資料：不內建遙測或個資蒐集。 
+• 第三方授權：內含元件依其原授權條款辦理。 
+• 免責：以「現況」提供，不保證適用性或可靠性。 
+• 責任限制：不承擔任何間接或衍生性損害責任。 
+• 中止：違反條款則自動終止使用權。
