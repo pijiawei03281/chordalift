@@ -1,95 +1,29 @@
 <!doctype html>
 <html lang="zh-Hant">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <title>Chordalift</title>
-    <meta name="description" content="Chordalift – 支援 Chorda 玩家社群的免費工具與下載站"/>
-    <meta name="theme-color" content="#3a70ba"/>
-
-    <!-- 圖示與 manifest（使用相對路徑，避免 GitHub Pages 子目錄走丟） -->
-    <link rel="icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <!-- 基礎樣式 -->
-    <style>
-      :root{
-        --bg:#0b1020; --panel:#121a33; --text:#e1e2e2; --muted:#a4a4a4;
-        --brand:#3a70ba; --brand-dark:#365d91; --line:#273157;
-      }
-      html,body{
-        margin:0; padding:0; background:var(--bg); color:var(--text);
-        font-family:SimHei,"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif;
-      }
-      .wrap{max-width:960px;margin:0 auto;padding:32px 20px}
-      .hero{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
-      .logo{max-width:420px;height:auto;display:block}
-      h1{margin:0;font-size:28px}
-      p.tag{margin:6px 0 0;color:var(--muted)}
-      .card{
-        background:var(--panel); border:1px solid var(--line);
-        border-radius:16px; padding:20px; margin:18px 0
-      }
-      .btn{
-        display:inline-block; padding:10px 14px; border-radius:12px;
-        border:1px solid var(--brand-dark); background:var(--brand);
-        color:#fff; text-decoration:none
-      }
-      .btn:active{transform:translateY(1px)}
-      small{color:var(--muted)}
-      ul{margin:8px 0 0 18px}
-      footer{margin-top:28px;color:var(--muted);font-size:12px}
-      code{background:#0f1630;padding:2px 6px;border-radius:6px;border:1px solid #1e2a52}
-    </style>
-  </head>
-  <body>
-    <div class="wrap">
-      <!-- Logo：優先使用修復後的 SVG；若瀏覽器不支援則退回 PNG -->
-      <div class="hero">
-        <picture>
-          <source srcset="fixed-chordalift-logo.svg" type="image/svg+xml">
-          <img class="logo" src="chordalift-logo-1600.png" alt="Chordalift Logo">
-        </picture>
-        <div>
-          <h1>Chordalift</h1>
-          <p class="tag">
-            釋放您的聲音：深入音樂創新！<br>
-            <small>Unleash Your Sound: Dive Deeper into Musical Innovation!</small>
-          </p>
-        </div>
-      </div>
-
-      <div class="card">
-        <h2>下載 Download</h2>
-        <p>
-          <a class="btn" href="https://github.com/pijiawei03281/chordalift/releases/latest">
-            ⬇ 取得最新版本（Releases）
-          </a>
-        </p>
-        <small>
-          附 <code>SHA256SUMS.txt</code> 可校驗完整性。若 Windows 出現 SmartScreen，請點「更多資訊 → 仍要執行」。
-        </small>
-      </div>
-
-      <div class="card">
-        <h3>使用指南（PDF）</h3>
-        <ul>
-          <li>EN / ZH-CN / ZH-TW：請至最新 Releases 下載</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>常見問題</h3>
-        <ul>
-          <li>為什麼做這個？— 支援社群使用者，補齊原 App 缺位。</li>
-          <li>是否收費？— 完全免費。</li>
-        </ul>
-      </div>
-
-      <footer>
-        本專案為社群維護，非 Artiphon/Chorda 官方；免費提供，使用風險自負。
-      </footer>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Chordalift</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <style>
+    :root{--bg:#0b1020;--panel:#121a33;--text:#e1e2e2;--muted:#a4a4a4;--brand:#3a70ba;--brand-dark:#365d91;--line:#273157}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:SimHei,"Noto Sans TC","Microsoft JhengHei",system-ui,sans-serif}
+    .wrap{max-width:960px;margin:0 auto;padding:32px 20px}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;margin:18px 0}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--brand-dark);background:var(--brand);color:#fff;text-decoration:none}
+    .logo{max-width:420px;height:auto;display:block}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img class="logo" src="https://pijiawei03281.github.io/chordalift/chordalift-logo-1600.png?v=3" alt="Chordalift Logo">
+    <div class="card">
+      <h2>下載 Download</h2>
+      <p><a class="btn" href="https://github.com/pijiawei03281/chordalift/releases/latest">⬇ 取得最新版本（Releases）</a></p>
+      <small>附 SHA256SUMS.txt 可校驗；若出現 SmartScreen，點「更多資訊 → 仍要執行」。</small>
     </div>
-  </body>
+  </div>
+</body>
 </html>
