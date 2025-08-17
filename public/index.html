@@ -55,6 +55,7 @@
     .badge{display:inline-block; font-size:12px; padding:2px 8px; border-radius:999px; border:1px solid var(--brand-l); color:var(--brand-l)}
     footer{margin-top:28px; color:var(--muted); font-size:12px}
     code{background:#0f1630; padding:2px 6px; border-radius:6px; border:1px solid #1e2a52}
+    pre{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;}
   </style>
 </head>
 <body>
@@ -89,7 +90,7 @@
       <div class="hint">附 <code>SHA256SUMS.txt</code> 可校驗完整性。若 Windows 出現 SmartScreen，請點「更多資訊 → 仍要執行」。</div>
     </div>
 
-    <!-- Auto Releases Widget -->
+    <!-- GRID -->
     <div class="grid">
       <section class="card col-6">
         <h3>最新版本摘要 <span id="rel-tag" class="badge">loading…</span></h3>
@@ -111,7 +112,18 @@
           <li>安全性？— 提供 <code>SHA256SUMS.txt</code>，可在 PowerShell 用 <code>Get-FileHash</code> 驗證。</li>
         </ul>
       </section>
-    </div>
+
+      <!-- 🔹 EULA 區塊（新增） -->
+      <section class="card col-12" id="eula">
+        <h3>最終用戶授權協議（EULA）</h3>
+        <div class="btn-row" style="margin:8px 0 12px 0">
+          <a class="btn secondary" href="EULA.txt" target="_blank" rel="noopener">線上閱讀</a>
+          <a class="btn secondary" href="EULA.txt" download>下載 EULA.txt</a>
+        </div>
+        <pre id="eula-preview" style="max-height:240px;overflow:auto;background:#0f1630;border:1px solid #1e2a52;padding:10px;border-radius:12px;white-space:pre-wrap">載入中…</pre>
+        <div class="hint">此文件為社群專案之自定 EULA。此內容僅供一般資訊，非法律意見。</div>
+      </section>
+    </div><!-- .grid 結束 -->
 
     <footer>
       本專案為社群維護，非 Artiphon/Chorda 官方；以「現況」提供，使用風險自負。&nbsp;|&nbsp;
@@ -119,7 +131,7 @@
     </footer>
   </div>
 
-  <!-- Client-side Release Loader（無伺服器，直接呼叫 GitHub API） -->
+  <!-- GitHub Releases Loader（無伺服器，直接呼叫 GitHub API） -->
   <script>
     (function(){
       const owner = "pijiawei03281";
@@ -180,6 +192,18 @@
             <li><span class="asset-name">API 受限或尚無 Releases</span>
             <a class="btn secondary" href="https://github.com/${owner}/${repo}/releases/latest">前往 Releases</a></li>`;
         });
+    })();
+  </script>
+
+  <!-- EULA Loader：抓取 public/EULA.txt 前 2000 字預覽 -->
+  <script>
+    (function(){
+      const box = document.getElementById('eula-preview');
+      if(!box) return;
+      fetch('EULA.txt', {cache: 'no-store'})
+        .then(r => r.ok ? r.text() : Promise.reject())
+        .then(t => { box.textContent = t.slice(0, 2000) + (t.length > 2000 ? '\n…（更多內容請點上方「線上閱讀」）' : ''); })
+        .catch(() => { box.textContent = '尚未找到 EULA.txt；請將文件放在 public/ 資料夾。'; });
     })();
   </script>
 </body>
