@@ -1,0 +1,23 @@
+name: Build Chordalift (Manual)
+on:
+  workflow_dispatch: {}
+
+jobs:
+  build-win:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Install deps
+        run: npm ci
+      - name: Build (Windows)
+        run: |
+          node scripts/prep-out.mjs
+          npx electron-builder --win nsis portable
+          node scripts/make-sums.mjs build_out
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: chordalift-win
+          path: build_out/**
